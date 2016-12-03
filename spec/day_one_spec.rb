@@ -24,6 +24,10 @@ RSpec.describe 'Day One' do
       expect(new.distance).to eq(0)
     end
 
+    it 'starts with all_moves loaded with origin' do
+      expect(new.all_moves).to eq([[0,0]])
+    end
+
     it 'if starting direction is north, a right turn changes direction to east' do
       pending
       expect(new.move('R', '3')).to eq('east')
