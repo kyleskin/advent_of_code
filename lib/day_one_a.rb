@@ -8,12 +8,13 @@ moves = input.split(', ')
 
 moves.each do |move|
   turn = move.slice!(0)
+  distance = move.to_i
   turn == 'R' ? direction.rotate! : direction.rotate!(-1)
   case direction.first
-  when 'N' then y += move.to_i
-  when 'E' then x += move.to_i
-  when 'S' then y -= move.to_i
-  when 'W' then x -= move.to_i
+  when 'N' then y += distance
+  when 'E' then x += distance
+  when 'S' then y -= distance
+  when 'W' then x -= distance
   end
 end
 
