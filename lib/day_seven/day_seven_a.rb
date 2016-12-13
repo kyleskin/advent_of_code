@@ -3,8 +3,8 @@
 def palindrome?(letters)
   letters = letters.chars
   while letters.length > 3 do
-      return true if letters[0..3] == letters[0..3].reverse && letters[0] != letters[1]
-      letters.shift
+    return true if letters[0..3] == letters[0..3].reverse && letters[0] != letters[1]
+    letters.shift
   end
 end
 
